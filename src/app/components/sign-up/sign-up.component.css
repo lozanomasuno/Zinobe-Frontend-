@@ -1,3 +1,7 @@
+body {
+    font-family: 'Lato', sans-serif
+}
+
 .btnBlue{
     border: 1px solid #009dda;
     background-color: #18baf1;
@@ -7,20 +11,12 @@
     background-color: #007eaf;
 }
 
-body {
-    font-family: 'Lato', sans-serif
-}
-
-h1 {
-    margin-bottom: 40px
-}
-
 label {
     color: #333
 }
 
 .btn-send {
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     width: 80%;
