@@ -1,44 +1,97 @@
-<div class="container"> 
-    <div class=" text-center mt-5 ">
-        <h1>Ingresa tus datos y solicita tu cr&eacute;dito ahora</h1>
-    </div>
-    <div class="row">
-        <div class="col-lg-7 mx-auto">
-            <div class="card mt-2 mx-auto p-4 bg-light">
-                <div class="card-body bg-light">
-                    <div class="container">
-                        <form id="contact-form" role="form">
-                            <div class="controls">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-12">
-                                    <div class="form-group"> <label for="form_name">Nombre *</label> <input id="form_name" type="text" name="name" class="form-control" placeholder="Ingrese su  nombre *" required="required" data-error="Firstname is required."> </div>
-                                </div>
-                                <div class="col-md-6 col-xs-12">
-                                    <div class="form-group"> <label for="form_lastname">Apellido *</label> <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Ingrese sus Apellidos *" required="required" data-error="Lastname is required."> </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group"> <label for="form_lastname">Cedula *</label> <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="N cedula *" required="required" data-error="Lastname is required."> </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group"> <label for="form_email">email *</label> <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required."> </div>
-                                </div>
-                            </div>
-
-                            <div class="row sectionPrestamos">
-                                <app-prestamos-valor></app-prestamos-valor>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block btnBlue" value="Solicitar Ahora">  </div>
-                            </div>
-                            </div>
-                        </form>
+<div class="container">
+  <div class="text-center mt-5">
+    <h1>Ingresa tus datos y solicita tu cr&eacute;dito ahora</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-7 mx-auto">
+      <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+          <div class="container">
+            <form id="contact-form" role="form">
+              <div class="controls">
+                <div class="row">
+                  <div class="col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <label for="form_name">Nombre *</label>
+                      <input
+                        id="form_name"
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        placeholder="Ingrese su  nombre *"
+                        required="required"
+                        data-error="Firstname is required."
+                      />
                     </div>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <label for="form_lastname">Apellido *</label>
+                      <input
+                        id="form_lastname"
+                        type="text"
+                        name="surname"
+                        class="form-control"
+                        placeholder="Ingrese sus Apellidos *"
+                        required="required"
+                        data-error="Lastname is required."
+                      />
+                    </div>
+                  </div>
                 </div>
-            </div> 
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_lastname">Cedula *</label>
+                      <input
+                        id="form_idnumber"
+                        type="number"
+                        name="id"
+                        class="form-control"
+                        placeholder="N cedula *"
+                        required="required"
+                        data-error="Lastname is required."
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_email">email *</label>
+                      <input
+                        id="form_email"
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Please enter your email *"
+                        required="required"
+                        data-error="Valid email is required."
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row sectionPrestamos">
+                  <app-prestamos-valor></app-prestamos-valor>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <input
+                      type="submit"
+                      class="btn btn-success btn-send pt-2 btn-block btnBlue"
+                      value="Solicitar Ahora"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+<script
+  type="text/javascript"
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"
+></script>

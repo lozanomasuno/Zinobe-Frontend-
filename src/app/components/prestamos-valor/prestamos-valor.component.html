@@ -1,19 +1,15 @@
+<div class="priceValueContainer">
+  <p>Desliza la cantidad deseada</p>
 
-
-
-
-  <div class="priceValueContainer">
-    <p>Desliza la cantidad deseada</p> 
-   
-    <mat-slider
-      [(ngModel)]="valueRange"
-      thumbLabel
-      [displayWith]="formatLabel"
-      tickInterval="100"
-      step="1000"
-      min="1000"
-      max="100000"
-      aria-label="units"></mat-slider>
-      <p id="priceValueLabe"> $ {{priceFormatValueRange(valueRange)}}</p>
-   </div>
-  
+  <mat-slider
+    [(ngModel)]="valueRangeLoan"
+    thumbLabel
+    [displayWith]="formatLabel"
+    tickInterval="100"
+    step="1000"
+    min="1000"
+    max="100000"
+    aria-label="units"
+  ></mat-slider>
+  <p id="priceValueLabe">$ {{ priceFormatValueRange(valueRangeLoan) }}</p>
+</div>
