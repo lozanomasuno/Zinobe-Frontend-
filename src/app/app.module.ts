@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { PrestamosValorComponent } from './components/prestamos-valor/prestamos-valor.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { MatSliderModule } from '@angular/material/slider';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
