@@ -22,7 +22,6 @@
                           id="form_name"
                           type="text"
                           name="name"
-                          class="form-control"
                           placeholder="Ingrese su  nombre *"
                           required="required"
                           data-error="Firstname is required."
@@ -44,7 +43,6 @@
                           id="form_surname"
                           type="text"
                           name="surname"
-                          class="form-control"
                           placeholder="Ingrese su  Apellido *"
                           required="required"
                           data-error="lastname is required."
@@ -62,14 +60,12 @@
                         class="example-full-width"
                         appearance="fill"
                       >
-                        <mat-label>Cedula</mat-label>
+                        <mat-label>C&eacute;dula</mat-label>
                         <input
                           matInput
-                          i
                           id="form_idnumber"
                           type="number"
                           name="id"
-                          class="form-control"
                           placeholder="N cedula *"
                           required="required"
                           data-error="Apelld is required."
@@ -84,13 +80,12 @@
                         class="example-full-width"
                         appearance="fill"
                       >
-                        <mat-label>Cedula</mat-label>
+                        <mat-label>E-mail</mat-label>
                         <input
                           matInput
                           id="form_email"
                           type="email"
                           name="email"
-                          class="form-control"
                           placeholder="Please enter your email *"
                           required="required"
                           data-error="Valid email is required."
@@ -102,7 +97,6 @@
 
                 <div class="row sectionPrestamos">
                   <app-prestamos-valor
-                    [valueRangeLoan]="userValueRangeLoan"
                     (setValueLoan)="userValueRangeLoan = $event"
                   ></app-prestamos-valor>
                 </div>
@@ -114,7 +108,7 @@
                         <button
                           mat-raised-button
                           color="primary"
-                          (click)="aproveLoanValueUser()"
+                          (click)="aproveLoanValueUser(userValueRangeLoan)"
                           class="btn btn-success btn-send pt-2 btn-block btnBlue"
                         >
                           Solicitar Ahora

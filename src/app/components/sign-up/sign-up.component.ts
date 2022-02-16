@@ -1,21 +1,18 @@
-import { outputAst } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
   public userValueRangeLoan: number = 10000;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  aproveLoanValueUser(loanFinalValue: number) {
+    console.log(loanFinalValue);
   }
-
-  aproveLoanValueUser() {
-    console.log(this.userValueRangeLoan);
-  }
-
 }
