@@ -7,7 +7,7 @@
       <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
           <div class="container">
-            <form id="contact-form" role="form">
+            <form id="contact-form" role="form" [formGroup]="formLoadRequest" (ngSubmit)="submmitToUserLoan()">
               <div class="controls">
                 <div class="row">
                   <div class="col-md-6 col-xs-12">
@@ -26,6 +26,7 @@
                           required="required"
                           data-error="Firstname is required."
                           maxlength="30"
+                          formControlName="userName"
                           autocomplete="off"
                         />
                       </mat-form-field>
@@ -47,6 +48,7 @@
                           required="required"
                           data-error="lastname is required."
                           maxlength="30"
+                          formControlName="userSurename"
                           autocomplete="off"
                         />
                       </mat-form-field>
@@ -68,7 +70,8 @@
                           name="id"
                           placeholder="N cedula *"
                           required="required"
-                          data-error="Apelld is required."
+                          formControlName="userIdNumber"
+                          data-error="Document is required."
                           autocomplete="off"
                         />
                       </mat-form-field>
@@ -88,6 +91,7 @@
                           name="email"
                           placeholder="Please enter your email *"
                           required="required"
+                          formControlName="userEmail"
                           data-error="Valid email is required."
                         />
                       </mat-form-field>
@@ -107,9 +111,11 @@
                       <div class="example-button-row">
                         <button
                           mat-raised-button
+                          type="submit"
                           color="primary"
                           (click)="aproveLoanValueUser(userValueRangeLoan)"
                           class="btn btn-success btn-send pt-2 btn-block btnBlue"
+                          [disabled]="formLoadRequest.invalid"
                         >
                           Solicitar Ahora
                         </button>
