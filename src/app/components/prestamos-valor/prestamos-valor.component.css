@@ -3,13 +3,18 @@
     min-width: 550px;
     justify-content: center;
 }
-
-.priceValueContainer p:nth-child(3n){
+.priceValueContainer p {
     display: flex;
     justify-content: center;
+}
+.priceValueContainer p:nth-child(3n){    
     font-size: 2em;
     color: rgb(255, 64, 89);
     font-weight: 700;
+}
+
+.priceValueContainer p strong{
+    color: rgb(255, 64, 89); 
 }
 
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -23,8 +28,10 @@
         min-width: 200px;
     }  
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { 
-     
+@media only screen and (min-device-width: 760px) and (max-device-width: 1024px) { 
+    .mat-slider-horizontal {
+        min-width: 400px;       
+    }      
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1280px) {

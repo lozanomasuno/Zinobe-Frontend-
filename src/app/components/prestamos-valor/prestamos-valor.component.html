@@ -1,5 +1,5 @@
 <div class="priceValueContainer">
-  <p>Desliza la cantidad deseada</p>
+  <p>Desliza la<strong> &nbsp;cantidad deseada</strong></p>
 
   <mat-slider
     [(ngModel)]="valueRangeLoan"
@@ -11,5 +11,5 @@
     max="100000"
     aria-label="units"
   ></mat-slider>
-  <p id="priceValueLabe">$ {{ priceFormatValueRange(valueRangeLoan) }}</p>
+  <p id="priceValueLabel">$ {{ priceFormatValueRange(valueRangeLoan) }}</p>
 </div>

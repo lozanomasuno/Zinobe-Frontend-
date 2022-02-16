@@ -12,75 +12,115 @@
                 <div class="row">
                   <div class="col-md-6 col-xs-12">
                     <div class="form-group">
-                      <label for="form_name">Nombre *</label>
-                      <input
-                        id="form_name"
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        placeholder="Ingrese su  nombre *"
-                        required="required"
-                        data-error="Firstname is required."
-                      />
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>Nombre</mat-label>
+                        <input
+                          matInput
+                          id="form_name"
+                          type="text"
+                          name="name"
+                          class="form-control"
+                          placeholder="Ingrese su  nombre *"
+                          required="required"
+                          data-error="Firstname is required."
+                          maxlength="30"
+                          autocomplete="off"
+                        />
+                      </mat-form-field>
                     </div>
                   </div>
                   <div class="col-md-6 col-xs-12">
                     <div class="form-group">
-                      <label for="form_lastname">Apellido *</label>
-                      <input
-                        id="form_lastname"
-                        type="text"
-                        name="surname"
-                        class="form-control"
-                        placeholder="Ingrese sus Apellidos *"
-                        required="required"
-                        data-error="Lastname is required."
-                      />
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>Apellido</mat-label>
+                        <input
+                          matInput
+                          id="form_surname"
+                          type="text"
+                          name="surname"
+                          class="form-control"
+                          placeholder="Ingrese su  Apellido *"
+                          required="required"
+                          data-error="lastname is required."
+                          maxlength="30"
+                          autocomplete="off"
+                        />
+                      </mat-form-field>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="form_lastname">Cedula *</label>
-                      <input
-                        id="form_idnumber"
-                        type="number"
-                        name="id"
-                        class="form-control"
-                        placeholder="N cedula *"
-                        required="required"
-                        data-error="Lastname is required."
-                      />
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>Cedula</mat-label>
+                        <input
+                          matInput
+                          i
+                          id="form_idnumber"
+                          type="number"
+                          name="id"
+                          class="form-control"
+                          placeholder="N cedula *"
+                          required="required"
+                          data-error="Apelld is required."
+                          autocomplete="off"
+                        />
+                      </mat-form-field>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="form_email">email *</label>
-                      <input
-                        id="form_email"
-                        type="email"
-                        name="email"
-                        class="form-control"
-                        placeholder="Please enter your email *"
-                        required="required"
-                        data-error="Valid email is required."
-                      />
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>Cedula</mat-label>
+                        <input
+                          matInput
+                          id="form_email"
+                          type="email"
+                          name="email"
+                          class="form-control"
+                          placeholder="Please enter your email *"
+                          required="required"
+                          data-error="Valid email is required."
+                        />
+                      </mat-form-field>
                     </div>
                   </div>
                 </div>
 
                 <div class="row sectionPrestamos">
-                  <app-prestamos-valor></app-prestamos-valor>
+                  <app-prestamos-valor
+                    [valueRangeLoan]="userValueRangeLoan"
+                    (setValueLoan)="userValueRangeLoan = $event"
+                  ></app-prestamos-valor>
                 </div>
 
                 <div class="row">
                   <div class="col-md-12">
-                    <input
-                      type="submit"
-                      class="btn btn-success btn-send pt-2 btn-block btnBlue"
-                      value="Solicitar Ahora"
-                    />
+                    <section>
+                      <div class="example-button-row">
+                        <button
+                          mat-raised-button
+                          color="primary"
+                          (click)="aproveLoanValueUser()"
+                          class="btn btn-success btn-send pt-2 btn-block btnBlue"
+                        >
+                          Solicitar Ahora
+                        </button>
+                      </div>
+                    </section>
                   </div>
                 </div>
               </div>
@@ -91,7 +131,3 @@
     </div>
   </div>
 </div>
-<script
-  type="text/javascript"
-  src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"
-></script>

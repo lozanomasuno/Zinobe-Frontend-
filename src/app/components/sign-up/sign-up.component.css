@@ -19,7 +19,6 @@ label {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    width: 80%;
     margin-left: 3px
 }
 
@@ -33,6 +32,9 @@ label {
     margin-right: 10px
 }
 
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgb(24 186 241 / 11%) !important;
+}
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
     .sectionPrestamos{
         justify-content: center;
@@ -43,4 +45,6 @@ label {
         padding: 0;
     }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+}

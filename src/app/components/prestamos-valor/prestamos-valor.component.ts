@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-prestamos-valor',
@@ -7,20 +7,25 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PrestamosValorComponent implements OnInit {
  @Input() public valueRangeLoan:number = 10000;
+ @Output() public setValueLoan = new EventEmitter<number>();
+ 
   constructor() { }
 
-  formatLabel(valueLoan: number) {
-    if (valueLoan >= 100) {
-      return Math.round(valueLoan / 1000) + 'k';
-    }    
-    return valueLoan;
-  }
-
-  priceFormatValueRange(formatedNumber: number){   
+  priceFormatValueRange(formatedNumber: number){ 
+    console.log(this.valueRangeLoan);  
     return new Intl.NumberFormat().format(formatedNumber);
   }
-  ngOnInit(): void {
-    
+  
+  formatLabel(valueLoan: number) {    
+      return Math.round(valueLoan / 1000) + 'k';
+  }
+
+  //be carefully  
+  emitValueTomainComponent(){
+    this.setValueLoan.emit(this.valueRangeLoan);
+  }
+
+  ngOnInit(): void {   
   }
   
 }
