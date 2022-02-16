@@ -113,7 +113,7 @@
                           mat-raised-button
                           type="submit"
                           color="primary"
-                          (click)="aproveLoanValueUser(userValueRangeLoan)"
+                          (click)="submmitToUserLoan()"
                           class="btn btn-success btn-send pt-2 btn-block btnBlue"
                           [disabled]="formLoadRequest.invalid"
                         >
@@ -130,4 +130,7 @@
       </div>
     </div>
   </div>
+</div>
+<div class="mt-5">
+  <app-list-data-loan-users></app-list-data-loan-users>
 </div>

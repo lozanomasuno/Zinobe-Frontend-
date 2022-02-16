@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserWithApprovedLoanService } from 'src/app/services/user-with-approved-loan.service';
 
 @Component({
   selector: 'app-list-data-loan-users',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListDataLoanUsersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usersLoanApproved : UserWithApprovedLoanService) { }
 
   ngOnInit(): void {
+
+    this.usersLoanApproved.loadUsersData()
+      .subscribe( answ =>{
+        console.log(answ)
+      })
   }
 
 }

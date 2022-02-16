@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
+  public userListApproved: [] = [];
   public userValueRangeLoan: number = 10000;
   public formLoadRequest: FormGroup;
 
@@ -18,13 +19,19 @@ export class SignUpComponent implements OnInit {
       userEmail: ['', Validators.required],
     });
   }
-  submmitToUserLoan(){
-    
-    console.log('Succesfully');
+
+  submmitToUserLoan() {
+    console.log(this.randomAleatoryApprovement());
+    if (this.randomAleatoryApprovement() === 1) {
+      console.log('not aproved!');
+    } else if (this.randomAleatoryApprovement() === 0) {
+      console.log('is aproved!');
+      location.reload();
+    }
+  }
+
+  randomAleatoryApprovement() {
+    return Math.floor(Math.random() * 2);
   }
   ngOnInit(): void {}
-
-  aproveLoanValueUser(loanFinalValue: number) {
-    console.log(this.formLoadRequest);
-  }
 }

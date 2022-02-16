@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { PrestamosValorComponent } from './components/prestamos-valor/prestamos-valor.component';
 import { ListDataLoanUsersComponent } from './components/list-data-loan-users/list-data-loan-users.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ListDataLoanUsersComponent } from './components/list-data-loan-users/li
     MatInputModule,
     FormsModule,
     MatButtonModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],
