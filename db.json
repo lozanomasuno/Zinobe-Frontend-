@@ -1,19 +1,25 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "posts": [      
+        {   
+          "nombre": "Ananias", 
+          "apellido": "Perez", 
+          "cedula": "1036931246",          
+          "correo": "annye@gmail.com",
+          "cantidad" : 12000
+        },
+        { 
+          "nombre": "Maria", 
+          "apellido": "Quiroga", 
+          "cedula": "1036931245",          
+          "correo": "marieye@gmail.com",
+          "cantidad" : 15000
+        },
+        { 
+          "nombre": "Eudalio", 
+          "apellido": "Ariaga", 
+          "cedula": "1036931244",
+          "correo": "EudyAri@gmail.com",          
+          "cantidad" : 25000
+        }
+      ]
 }
