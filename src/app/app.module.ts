@@ -16,6 +16,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { PrestamosValorComponent } from './components/prestamos-valor/prestamos-valor.component';
 import { ListDataLoanUsersComponent } from './components/list-data-loan-users/list-data-loan-users.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     SignUpComponent,
     PrestamosValorComponent,
-    ListDataLoanUsersComponent
+    ListDataLoanUsersComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
