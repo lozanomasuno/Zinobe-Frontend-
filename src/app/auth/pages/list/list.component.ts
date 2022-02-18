@@ -10,15 +10,23 @@ import { UserListLoad } from 'src/app/models/reqres-reponse';
 export class ListComponent implements OnInit {
   constructor(private usersApprovedService: UserWithApprovedLoanService) {}
   public users: UserListLoad[] = [];
+  public idNumber: string = '';
 
   priceListFormat(formatedNumber: number) {
     return new Intl.NumberFormat().format(formatedNumber);
   }
 
+  userPayLoan() {
+    this.usersApprovedService
+      .setPayment(this.idNumber)
+      .subscribe((resp: any) => {
+        this.users = resp;
+      });
+  }
+
   ngOnInit(): void {
     this.usersApprovedService.loadUsersData().subscribe((resp: any) => {
       this.users = resp;
-      console.log(resp)
     });
   }
 }

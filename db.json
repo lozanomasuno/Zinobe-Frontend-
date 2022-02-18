@@ -1,25 +1,60 @@
 {
-  "posts": [      
-        {   
-          "nombre": "Ananias", 
-          "apellido": "Perez", 
-          "cedula": "1036931246",          
-          "correo": "annye@gmail.com",
-          "cantidad" : 12000
-        },
-        { 
-          "nombre": "Maria", 
-          "apellido": "Quiroga", 
-          "cedula": "1036931245",          
-          "correo": "marieye@gmail.com",
-          "cantidad" : 15000
-        },
-        { 
-          "nombre": "Eudalio", 
-          "apellido": "Ariaga", 
-          "cedula": "1036931244",
-          "correo": "EudyAri@gmail.com",          
-          "cantidad" : 25000
-        }
-      ]
+  "posts": [
+    {
+      "id": "1",
+      "nombre": "Ananias",
+      "apellido": "Perez",
+      "cedula": "1036931246",
+      "correo": "annye@gmail.com",
+      "cantidad": 12000
+    },
+    {
+      "id": "2",
+      "nombre": "Maria",
+      "apellido": "Quiroga",
+      "cedula": "1036931245",
+      "correo": "marieye@gmail.com",
+      "cantidad": 15000
+    },
+    {
+      "id": "3",
+      "nombre": "Eudalio",
+      "apellido": "Ariaga",
+      "cedula": "1036931244",
+      "correo": "EudyAri@gmail.com",
+      "cantidad": 25000
+    },
+    {
+      "nombre": "Lucas",
+      "apellido": "Arnau",
+      "cedula": "1036931248",
+      "correo": "luckye@gmail.com",
+      "cantidad": 21000,
+      "id": "cImDxXH"
+    },
+    {
+      "nombre": "Juliana",
+      "apellido": "Torres",
+      "cedula": 21038490,
+      "correo": "mailmail@gmail.com",
+      "cantidad": 10000,
+      "id": "TieQM9t"
+    },
+    {
+      "nombre": "Nelson",
+      "apellido": "Lozano",
+      "cedula": 123456789,
+      "correo": "lozanomasuno@yahoo.es",
+      "cantidad": 79000,
+      "id": "V6-e2j0"
+    },
+    {
+      "nombre": "Danny",
+      "apellido": "Areiza",
+      "cedula": 104654654,
+      "correo": "mailmail@gmail.com",
+      "cantidad": 54000,
+      "id": "f-9tA9x"
+    }
+  ]
 }

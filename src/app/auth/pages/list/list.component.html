@@ -20,7 +20,7 @@
           <td>$ {{ priceListFormat(item.cantidad) }}</td>
           <td>
             <div class="example-button-row">
-              <button mat-raised-button color="primary">Pagar</button>
+              <button mat-raised-button color="primary" (click)="userPayLoan()">Pagar</button>
             </div>
           </td>
         </tr>

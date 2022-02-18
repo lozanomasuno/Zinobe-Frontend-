@@ -13,7 +13,11 @@ export class UserWithApprovedLoanService {
     return this.http.get<UserListLoad[]>(this.urlUsers) 
   }
 
-  recordUserData(){
-    //return this.http.post<UserListLoad>(this.urlUsers)
+  recordUserData(data: UserListLoad){
+    return this.http.post<UserListLoad>(this.urlUsers, data)
+  }
+
+  setPayment(id:string){
+    return this.http.delete<UserListLoad>(this.urlUsers + id)
   }
 }

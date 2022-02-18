@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 //Components
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -35,6 +36,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     MatButtonModule,
     HttpClientModule,
+    MatSnackBarModule,
     ReactiveFormsModule
   ],
   providers: [],
