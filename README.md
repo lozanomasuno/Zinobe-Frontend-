@@ -1,4 +1,5 @@
 
+#### Antes de ejecutarlo se recomienda lo siguiente
 El proyecto fue generado en Angular,  [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 Para ejecutarse correctamente deben tenerse las versiones de node 16 o superiores
 y las versiones de Yarn 1.20 o superior
@@ -10,7 +11,14 @@ para ejecutar el back end hemos instalado el json server
 
 Y una vez instalado debemos ejecutarlo así 
 
->$ json-server --watch db.json
+>json-server --watch db.json
+
+La experiencia de usuario fue realizada en Angular Material
+se instala desde consola así. 
+>ng add @angular/material
+
+si después de esto el proyecto no ejecuta se sugiere que instale una actualización de angular así 
+>npm install
 
 This project was generated with
 
@@ -37,6 +45,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-#� �Z�i�n�o�b�e�-�F�r�o�n�t�e�n�d�-�
-�
-�
+
