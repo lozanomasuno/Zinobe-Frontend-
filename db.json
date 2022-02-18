@@ -55,6 +55,14 @@
       "correo": "mailmail@gmail.com",
       "cantidad": 54000,
       "id": "f-9tA9x"
+    },
+    {
+      "nombre": "Luis",
+      "apellido": "Arteaga",
+      "cedula": 1587498798,
+      "correo": "mailmail@gmail.com",
+      "cantidad": 4600,
+      "id": "FEACEwl"
     }
   ]
 }

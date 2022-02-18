@@ -70,6 +70,7 @@ export class SignUpComponent implements OnInit {
       verticalPosition: this.verticalPosition,
     });
   }
+
   approvedLoanMessage() {
     this._snackBar.open('Aprobado', 'Felicidades', {
       duration: this.durationInSeconds * 1000,
@@ -79,13 +80,12 @@ export class SignUpComponent implements OnInit {
   }
   submmitToUserLoan() {
     if (this.randomAleatoryApprovement() === 1) {
-      this.notApprovedLoan();
-      location.reload();
+      this.notApprovedLoan();      
     } else if (this.randomAleatoryApprovement() === 0) {
       this.approvedLoanMessage();
-      this.saveNew();
-      location.reload();
+      this.saveNew();      
     }
+    location.reload();
   }
 
   randomAleatoryApprovement() {

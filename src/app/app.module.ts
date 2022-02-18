@@ -18,13 +18,15 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 //Components
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BaseCapitalComponent } from './components/base-capital/base-capital.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    BaseCapitalComponent
   ],
   imports: [
     BrowserModule,

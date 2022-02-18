@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { UserWithApprovedLoanService } from 'src/app/services/user-with-approved-loan.service';
 import { UserListLoad } from 'src/app/models/reqres-reponse';
 
@@ -9,8 +9,11 @@ import { UserListLoad } from 'src/app/models/reqres-reponse';
 })
 export class ListComponent implements OnInit {
   constructor(private usersApprovedService: UserWithApprovedLoanService) {}
+  @Output() public addingTotal: any = new EventEmitter<number>();
   public users: UserListLoad[] = [];
   public idNumber: string = '';
+  private loanTotalDeb: number[] = [];
+  
 
   priceListFormat(formatedNumber: number) {
     return new Intl.NumberFormat().format(formatedNumber);
@@ -24,9 +27,21 @@ export class ListComponent implements OnInit {
       });
   }
 
+  setAllTotals(alltotal: number[]) {     
+    return this.addingTotal = alltotal.reduce((a, b) => a + b, 0);
+  }
+
+  getTotalLoan(allUserTotal: any[]) {
+    for (let i = 0; i < allUserTotal.length; i++) {
+      this.loanTotalDeb.push(allUserTotal[i].cantidad);
+    }
+    this.setAllTotals(this.loanTotalDeb);
+  }
+
   ngOnInit(): void {
     this.usersApprovedService.loadUsersData().subscribe((resp: any) => {
       this.users = resp;
+      this.getTotalLoan(this.users);
     });
   }
 }
