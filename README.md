@@ -4,21 +4,21 @@ El proyecto fue generado en Angular,  [Angular CLI](https://github.com/angular/a
 Para ejecutarse correctamente deben tenerse las versiones de node 16 o superiores
 y las versiones de Yarn 1.20 o superior
 y una vez cargado debe ejecutarse el front end desde consola
-> yanrn start
+> `yarn start`
 
 para ejecutar el back end hemos instalado el json server 
->npm install -g json-server
+> `npm install -g json-server`
 
 Y una vez instalado debemos ejecutarlo así 
 
->json-server --watch db.json
+> `json-server --watch db.json`
 
 La experiencia de usuario fue realizada en Angular Material
 se instala desde consola así. 
->ng add @angular/material
+> `ng add @angular/material`
 
 si después de esto el proyecto no ejecuta se sugiere que instale una actualización de angular así 
->npm install
+> `npm install`
 
 This project was generated with
 
